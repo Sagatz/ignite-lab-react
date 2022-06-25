@@ -1,9 +1,10 @@
-import { gql, useMutation } from "@apollo/client";
 import { useState, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { Footer } from "../components/Footer";
 import { Logo } from "../components/Logo";
 import { useCreateSubscriberMutation } from "../graphql/generated";
+import mockUp from "../assets/code-mockup.png"
+import reactLogo from "../assets/ReactJS icon.svg"  
 
 export function Subscribe() {
     const navigate = useNavigate()
@@ -73,9 +74,9 @@ export function Subscribe() {
 
             </div>
 
-            <img src="/src/assets/ReactJS icon.svg" className="absolute" alt="" />
+            <img src={reactLogo} className="absolute" alt="" />
 
-            <img src="/src/assets/code-mockup.png" className="mt-10" alt="" />
+            <img src={mockUp} className="mt-10" alt="" />
 
             <Footer />
         </div>
